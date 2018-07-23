@@ -2,8 +2,8 @@
 PRACTICE Test 2, practice_problem 3.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Siwei Xu.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -32,11 +32,11 @@ import rosegraphics as rg
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_practice_problem3a()
+#    run_test_practice_problem3a()
     run_test_practice_problem3b()
-    run_test_practice_problem3c()
-    run_test_practice_problem3d()
-    run_test_practice_problem3e()
+#    run_test_practice_problem3c()
+#    run_test_practice_problem3d()
+#    run_test_practice_problem3e()
 
 
 def is_prime(n):
@@ -163,6 +163,15 @@ def practice_problem3a(circles):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
+    product = 1
+
+    if len(circles) == 0:
+        return 1
+    else:
+        for k in range(len(circles)):
+            circle = circles[k]
+            product *= circle.center.x
+        return product
 
 
 def run_test_practice_problem3b():
